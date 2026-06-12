@@ -1,4 +1,24 @@
-# Lycia Theme
+<h1 align="center">
+  Lycia <a href="https://github.com/Aevstiel/Lycia-Theme/">Theme</a>
+</h3>
+
+<p align="center">
+  <a href="https://github.com/Aevstiel/Lycia-Theme/stargazers">
+    <img src="https://img.shields.io/github/stars/Aevstiel/Lycia-Theme?style=for-the-badge&logo=starship&color=CC4B63&logoColor=E3BFF2&labelColor=140E1A">
+  </a>
+  <a href="https://github.com/Aevstiel/Lycia-Theme/issues">
+    <img src="https://img.shields.io/github/issues/Aevstiel/Lycia-Theme?style=for-the-badge&logo=gitbook&color=AC5ED6&logoColor=E3BFF2&labelColor=140E1A">
+  </a>
+  <a href="https://github.com/Aevstiel/Lycia-Theme/contributors">
+    <img src="https://img.shields.io/github/contributors/Aevstiel/Lycia-Theme?style=for-the-badge&logo=github&color=DEABAB&logoColor=E3BFF2&labelColor=140E1A">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://stand-with-ukraine.pp.ua">
+    <img alt="StandWithUkraine" src="https://img.shields.io/badge/Support-Ukraine-FFC93C?style=for-the-badge&logoColor=cad3f5&labelColor=07689F">
+  </a>
+</p>
 
 Lycia is a [Material Design](https://material.io) theme for GNOME/GTK based desktop environments.
 
