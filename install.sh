@@ -17,7 +17,6 @@ echo " Lycia Theme Installer"
 echo "========================================="
 echo
 
-# Check sources
 for theme in "${THEMES[@]}"; do
     if [[ ! -d "${SRC_DIR}/${theme}" ]]; then
         echo "Error: Missing theme directory:"
@@ -26,7 +25,6 @@ for theme in "${THEMES[@]}"; do
     fi
 done
 
-# Create destination
 mkdir -p "${THEMES_DIR}"
 
 echo "Installing GTK/GNOME themes..."
@@ -43,7 +41,17 @@ echo "Themes installed successfully to:"
 echo "  ${THEMES_DIR}"
 echo
 
-# GDM theme prompt
+read -rp "Install GTK4 / Libadwaita theme files? [Y/n]: " install_gtk4
+
+if [[ -z "$install_gtk4" || "$install_gtk4" =~ ^[Yy]$ ]]; then
+    echo "Installing GTK4 / Libadwaita theme..."
+
+    mkdir -p "$HOME/.config/gtk-4.0"
+    cp -r "src/Lycia/gtk-4.0/." "$HOME/.config/gtk-4.0/"
+
+    echo "GTK4 / Libadwaita files installed."
+fi
+
 echo "WARNING:"
 echo "Installing the GDM theme modifies system GNOME Shell resources."
 echo "This may cause login screen issues or break after GNOME updates."
