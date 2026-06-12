@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Lycia
+Comment=A clean Gtk+ theme inspiring elegance and charm
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Lycia
+MetacityTheme=Lycia
+IconTheme=Reversal-purple-dark
+CursorTheme=Vimix-dark
+ButtonLayout=close,minimize,maximize:menu
