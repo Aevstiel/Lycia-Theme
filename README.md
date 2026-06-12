@@ -1,6 +1,6 @@
 # Lycia Theme
 
-Orchis is a [Material Design](https://material.io) theme for GNOME/GTK based desktop environments.
+Lycia is a [Material Design](https://material.io) theme for GNOME/GTK based desktop environments.
 
 Based on vinceliuice -- [Orchis Theme](https://github.com/vinceliuice/Orchis-theme/)
 
@@ -52,7 +52,7 @@ sh ./uninstall.sh
 ## Other Projects
 
 | Project | GitHub |
-| --------------------------- | ------ | ----- |
+| --------------------------- | ----- |
 | Colour Palette | [Source](https://github.com/Aevstiel/Lycia) |
 | Start Page | [Source](https://github.com/Aevstiel/Lycia) |
 | GRUB Theme | [Source](https://github.com/Aevstiel/Lycia-GRUB) |
