@@ -1,5 +1,5 @@
 <h1 align="center">
-  Lycia <a href="https://github.com/Aevstiel/Lycia-Theme/">Theme</a>
+  <a href="https://github.com/Aevstiel/Lycia-Theme/">Lycia</a> Theme
 </h3>
 
 <p align="center">
