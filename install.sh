@@ -42,14 +42,45 @@ echo "  ${THEMES_DIR}"
 echo
 
 read -rp "Install GTK4 / Libadwaita theme files? [Y/n]: " install_gtk4
+install_gtk4=${install_gtk4:-Y}
 
-if [[ -z "$install_gtk4" || "$install_gtk4" =~ ^[Yy]$ ]]; then
+if [[ "$install_gtk4" =~ ^[Yy]$ ]]; then
+    GTK4_DIR="$HOME/.config/gtk-4.0"
+    THEME_GTK4_DIR="$HOME/.themes/Lycia/gtk-4.0"
+
     echo "Installing GTK4 / Libadwaita theme..."
 
-    mkdir -p "$HOME/.config/gtk-4.0"
-    cp -r "src/Lycia/gtk-4.0/." "$HOME/.config/gtk-4.0/"
+    mkdir -p "$GTK4_DIR"
 
-    echo "GTK4 / Libadwaita files installed."
+    BACKUP_DIR="$(ls -1dt "$HOME"/.config/gtk-4.0.backup.* 2>/dev/null | head -n1)"
+
+if [[ -z "${BACKUP_DIR:-}" ]]; then
+    BACKUP_DIR="$GTK4_DIR.backup.$(date +%Y%m%d-%H%M%S)"
+    mkdir -p "$BACKUP_DIR"
+
+    for file in gtk.css gtk-dark.css assets; do
+        if [[ -e "$GTK4_DIR/$file" || -L "$GTK4_DIR/$file" ]]; then
+            mv "$GTK4_DIR/$file" "$BACKUP_DIR/"
+        fi
+    done
+
+    echo "GTK4 backup created:"
+    echo "  $BACKUP_DIR"
+else
+    echo "Existing GTK4 backup found:"
+    echo "  $BACKUP_DIR"
+fi
+
+    ln -sfn "$THEME_GTK4_DIR/gtk.css" "$GTK4_DIR/gtk.css"
+
+    [[ -e "$THEME_GTK4_DIR/gtk-dark.css" ]] && \
+        ln -sfn "$THEME_GTK4_DIR/gtk-dark.css" "$GTK4_DIR/gtk-dark.css"
+
+    [[ -e "$THEME_GTK4_DIR/assets" ]] && \
+        ln -sfn "$THEME_GTK4_DIR/assets" "$GTK4_DIR/assets"
+
+    echo "GTK4 files installed."
+    echo "Backup saved to: $BACKUP_DIR"
 fi
 
 echo "WARNING:"
@@ -77,9 +108,11 @@ case "${INSTALL_GDM}" in
         echo "You may be prompted for your sudo password."
         echo
 
-        sudo cp \
-            /usr/share/gnome-shell/gnome-shell-theme.gresource \
-            /usr/share/gnome-shell/gnome-shell-theme.gresource.bak
+        if ! sudo test -f /usr/share/gnome-shell/gnome-shell-theme.gresource.bak; then
+    sudo cp \
+        /usr/share/gnome-shell/gnome-shell-theme.gresource \
+        /usr/share/gnome-shell/gnome-shell-theme.gresource.bak
+fi
 
         sudo cp \
             "${GDM_THEME}" \
