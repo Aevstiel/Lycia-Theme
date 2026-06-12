@@ -24,7 +24,7 @@ Based on vinceliuice -- [Orchis Theme](https://github.com/vinceliuice/Orchis-the
 Clone this repository to a temporary directory:
 
 ```sh
-git clone https://github.com/Aevstiel/Lycia
+git clone https://github.com/Aevstiel/Lycia-Theme
 ```
 
 Run the following commands in the terminal:
