@@ -20,11 +20,16 @@
   </a>
 </p>
 
-Lycia is a [Material Design](https://material.io) theme for GNOME/GTK based desktop environments.
-
-Based on vinceliuice -- [Orchis Theme](https://github.com/vinceliuice/Orchis-theme/)
+Lycia is a modern GNOME theme using the Lycia soft colours and contemporary GTK4 design language.
 
 ![screenshot](images/screenshot.png?raw=true)
+
+## Features
+- GNOME Shell
+- GDM Login Screen
+- GTK4 / Libadwaita Support
+- GTK3 / Legacy
+- Constant Updates
 
 ## Requirements
 
