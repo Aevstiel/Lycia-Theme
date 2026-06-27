@@ -73,8 +73,33 @@ sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override -
 ```sh
 sh ./uninstall.sh
 ```
+## Roadmap
 
-## Other Projects
+### Ecosystem
+- [ ] Icon Theme
+- [ ] Cursor Theme
+- [ ] Wallpaper Collection
+- [ ] GRUB Theme
+- [ ] Plymouth Theme
+- [ ] Firefox Theme
+- [ ] Discord Theme
+- [ ] Telegram Theme
+- [ ] VS Code Theme
+- [ ] VS Code Icons
+- [ ] Terminal Colour Schemes
+
+### Desktop Support
+- [ ] KDE Plasma Support
+- [ ] Qt Application Theming
+- [ ] Cinnamon Support
+- [ ] XFCE Support
+
+### Distribution
+- [ ] GNOME-Look Release
+- [ ] AUR Package
+- [ ] Nix Package
+
+## Other Projects (Work in Progress)
 
 | Project | GitHub |
 | --------------------------- | ----- |
