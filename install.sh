@@ -94,7 +94,7 @@ INSTALL_GDM="${INSTALL_GDM:-N}"
 case "${INSTALL_GDM}" in
     [Yy]|[Yy][Ee][Ss])
 
-        GDM_THEME="${SRC_DIR}/Lycia/gnome-shell-theme.gresource"
+        GDM_THEME="${SRC_DIR}/Lycia/gnome-shell/gnome-shell-theme.gresource"
 
         if [[ ! -f "${GDM_THEME}" ]]; then
             echo
